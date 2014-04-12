@@ -11,12 +11,12 @@ public class WhileDoWhileLoopExample {
 			j++;
 		}
 		
-		System.out.println("*************************");
+		System.out.println("\n*************************");
 		int k = 0;
 		do {
 			System.out.print("-"+ k);
 			k++;
-		} while (k < 9);
+		} while (k < 10);
 		
 		
 	}
