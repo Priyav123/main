@@ -12,7 +12,7 @@ public class WhileDoWhileLoopExample {
 		}
 		
 		System.out.println("\n*************************    Hello World !!");
-		System.out.println("\n*************************   Hello World 2");
+		System.out.println("\n*************************   Hello World 3");
 		int k = 0;
 		do {
 			System.out.print("-"+ k);
