@@ -2,7 +2,10 @@ public class ForLoopExampleTwo {
 
 	public static void main(String[] args) {
 		int intArray[] = { 1, 2, 3, 4, 5, 6, 7, 8, 9 };
-
+		
+		int hello;
+		int Hello;
+		
 		outerLoop: for (int index = 0; index < intArray.length; index++) {
 			int currentValue = intArray[index];
 			/*
