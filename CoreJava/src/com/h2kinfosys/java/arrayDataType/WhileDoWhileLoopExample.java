@@ -1,4 +1,4 @@
-
+package com.h2kinfosys.java.arrayDataType;
 public class WhileDoWhileLoopExample {
 
 	public static void main(String[] args) {
@@ -18,7 +18,5 @@ public class WhileDoWhileLoopExample {
 			System.out.print("-"+ k);
 			k++;
 		} while (k < 10);
-		
-		
 	}
 }

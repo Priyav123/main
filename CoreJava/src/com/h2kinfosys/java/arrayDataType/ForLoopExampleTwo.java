@@ -1,3 +1,4 @@
+package com.h2kinfosys.java.arrayDataType;
 public class ForLoopExampleTwo {
 
 	public static void main(String[] args) {
