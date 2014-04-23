@@ -3,23 +3,35 @@ package com.h2kinfosys.java.classes;
 public class Bike {
 	
 	int petrolLiter;
+	String name;
+	int length;
+	
 	
 	/**
-	 * 
+	 * Constructor with no argument
 	 */
 	public Bike(){
-		petrolLiter = 20;
+		this.petrolLiter = 5;
+		this.name = "Bike";
+		this.length = 10;
+	}
+	/**
+	 * This is Constructor Overloading
+	 * @param petrolLiter
+	 */
+	public Bike(int petrolLiter){
+		this.petrolLiter =  petrolLiter;
 	}
 	
-	public static void main(String[] args) {
-		Bike bike = new Bike();
-		System.out.println("Bike.main()" + bike.petrolLiter);
-		
-		Bike bike2 = new Bike();
-		System.out.println("Bike.main()" + bike2.petrolLiter);
-		
-		Bike bike3 = new Bike();
-		System.out.println("Bike.main()" + bike3.petrolLiter);
+	public Bike(int petrolLiter , String name){
+		this(petrolLiter);
+//		this.petrolLiter = petrolLiter;
+		this.name = name;
 	}
-
+	
+	public Bike(int petrolLiter , String name , int length){
+		this(petrolLiter, name); // Calling this class Contructor
+		this.length  = length;
+	}
+	
 }
