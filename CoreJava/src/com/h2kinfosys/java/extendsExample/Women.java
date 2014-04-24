@@ -13,7 +13,7 @@ public class Women extends Human {
 		//this.country = country;
 		this.name = name ;
 		this.height = height;*/
-		super(name,height,country);
+//		super(name,height,country);
 	}
 	
 	public static void main(String[] args) {
