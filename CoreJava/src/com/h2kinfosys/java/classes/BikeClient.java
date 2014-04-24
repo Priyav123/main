@@ -3,8 +3,10 @@ package com.h2kinfosys.java.classes;
 public class BikeClient {
 
 	public static void main(String[] args) {
-		Bike bike1 = new Bike();
-		System.out.println("Bike.main()" + bike1.petrolLiter);
+		
+		Bike referenceBike1 = new Bike();
+		System.out.println("Bike.main()" + referenceBike1.petrolLiter);
+		System.out.println("Bike.main()" + new Bike().name);
 		
 		Bike bike2 = new Bike(10);
 		System.out.println("Bike.main()" + bike2.petrolLiter);
@@ -16,5 +18,7 @@ public class BikeClient {
 		System.out.println("Bike.main()" + hondaBike10.petrolLiter +" "
 				+ " " + hondaBike10.name + " "
 				+ " "+ hondaBike10.length );
+		
+		System.out.println("BikeClient.main()  " + (new Bike(50).petrolLiter));
 	}
 }
