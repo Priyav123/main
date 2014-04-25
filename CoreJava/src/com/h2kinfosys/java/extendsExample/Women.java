@@ -9,11 +9,10 @@ public class Women extends Human {
 	}
 	
 	public Women(String name, int height , String country) {
-		/*this(country);
-		//this.country = country;
-		this.name = name ;
-		this.height = height;*/
-//		super(name,height,country);
+//		this.country = country;
+//		this.name = name ;
+//		this.height = height;
+		super(name,height,country);
 	}
 	
 	public static void main(String[] args) {
@@ -23,6 +22,8 @@ public class Women extends Human {
 		
 		System.out.println(women.country);
 		System.out.println(women2.country +" " + women2.name +" "+ women2.height);
+		
+		women.run();
 	}
 
 }

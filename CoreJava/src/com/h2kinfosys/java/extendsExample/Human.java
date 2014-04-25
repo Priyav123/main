@@ -4,6 +4,10 @@ public class Human {
 	String name;
 	int height;
 	String country;
+	
+	public void run(){
+		System.out.println("I am running");
+	}
 	/**
 	 * 
 	 */
