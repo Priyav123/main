@@ -20,6 +20,7 @@ public class Bike {
 	 * 
 	 * @param petrolLiter
 	 */
+	
 	public Bike(int petrolLiter) {
 		this.petrolLiter = petrolLiter;
 	}
