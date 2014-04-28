@@ -2,19 +2,27 @@ package com.h2kinfosys.java.methods;
 
 public class Animal {
 	String color;
-	int length;
+	AnimalLength length;
 	String breed;
 	
-	public Animal(int length) {
-		this.length = length;
+	/*public Animal(){
+		
+	}
+	
+	*/
+	public Animal(AnimalLength size) {
+		this.length = size;
 	}
 	
 	
 	public void printMyBehaviour(){
-		if(length > 2){
-			System.out.println("My Length is " + length +" I am a Big animal");
-		}else {
-			System.out.println("My Length is " + length +" I am a Normal Animal");
+		
+		if(AnimalLength.SMALL == length){
+			System.out.println("My Length is " + length +" I am a Pomorian Animal");
+		}else if(AnimalLength.MEDIUM == length){
+			System.out.println("My Length is " + length +" I am a Rat Animal");
+		}else if(AnimalLength.MEDIUM == length) {
+			System.out.println("My Length is " + length +" I am a Tiger Animal");
 		}
 	}
 	/**
@@ -36,11 +44,12 @@ public class Animal {
 	}
 	
 	public static void main(String[] args) {
-		Animal pomorian = new Animal(1);
-		Animal tiger = new Animal(4);
 		
-		pomorian.printMyBehaviour(10);
-		pomorian.printMyBehaviour("");
+/*		Animal pomorian = new Animal(1);
+		Animal tiger = new Animal(3);
+*/		
+//		pomorian.printMyBehaviour();
+//		pomorian.printMyBehaviour();
 		
 //		tiger.printMyBehaviour();
 	}
