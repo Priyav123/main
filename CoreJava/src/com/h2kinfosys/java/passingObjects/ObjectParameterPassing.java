@@ -9,14 +9,8 @@ public class ObjectParameterPassing {
 		
 		/*PrintComputer printer = new PrintComputer();
 		printer.printComputer(comp);
-		
 		printer.printAgain(comp);*/
-		
 		System.out.println(comp);
-		
-		
 		System.out.println("Hello");
-		
-		
 	}
 }

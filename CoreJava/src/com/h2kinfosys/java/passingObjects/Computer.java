@@ -10,7 +10,9 @@ public class Computer {
 		this.size = size;
 		this.type = type;
 	}
-	
+	public void printMe(int i) {
+		
+	}
 	/*@Override
 	public String toString() {
 		// TODO Auto-generated method stub
