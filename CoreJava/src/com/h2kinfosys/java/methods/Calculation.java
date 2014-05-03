@@ -42,6 +42,13 @@ public class Calculation {
 		return 10;
 	}*/
 	
+	public int addValue(int a , int b) {
+		return a+b;
+	}
+	
+	public static int subValue(int a , int b) {
+		return a-b;
+	}
 	public String subMe(String message , String name) {
 		System.out.println( firstValue-secondValue);
 		return "";
