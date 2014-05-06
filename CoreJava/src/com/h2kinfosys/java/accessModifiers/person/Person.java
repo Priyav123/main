@@ -5,6 +5,8 @@ public class Person {
 	private int ssn;
 	private int age;
 	
+	protected int id;
+	
 	public String getName() {
 		return name;
 	}
@@ -31,6 +33,4 @@ public class Person {
 	public void printMe() {
 		System.out.println("Name is " + name +" SSN :"+ssn+" Age : "+ age);
 	}
-	
-	
 }
