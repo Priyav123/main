@@ -1,4 +1,6 @@
-package com.h2kinfosys.java.abstractinterfaceExample;
+package com.h2kinfosys.java.abstractinterfaceExample.itemployee;
+
+import com.h2kinfosys.java.abstractinterfaceExample.Employee;
 
 public abstract class ITEmployee extends Employee {
 	
@@ -13,6 +15,7 @@ public abstract class ITEmployee extends Employee {
 
 	@Override
 	public void employmentType() {
+		System.out.println("I am an IT Employee");
 	}
 	
 	public abstract void computerExperience();

@@ -9,7 +9,6 @@ public abstract class Employee {
 		this.name = name;
 		this.age = age;
 		this.ssn = ssn;
-		new Employee();
 	}
 	
 	/**
