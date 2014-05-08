@@ -27,4 +27,16 @@ public class RelianceOilEmployee extends RelianceEmployee {
 		System.out.println("I am rel Oil Emp who can jump also");
 	}
 
+	@Override
+	public void callMe() {
+		// TODO Auto-generated method stub
+		
+	}
+
+	@Override
+	public void singGoodMusic() {
+		// TODO Auto-generated method stub
+		
+	}
+
 }
