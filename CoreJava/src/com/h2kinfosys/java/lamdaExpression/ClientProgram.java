@@ -33,5 +33,20 @@ public class ClientProgram {
 		WorkerInterface nonItWorker = () -> System.out.println("I am non IT Worker");
 		//Lamda Expression
 		nonItWorker.working();
+		
+		Calculate calc = (a,b) -> a/b;
+		
+		System.out.println(calc.calc(20, 10));
+		calc(new Calculate(){
+			@Override
+			public int calc(int a, int b) {
+				return a+b+10;
+			}
+			
+		});
+	}
+	
+	public static void calc(Calculate calc){
+		System.out.println(calc.calc(10, 20));;
 	}
 }
