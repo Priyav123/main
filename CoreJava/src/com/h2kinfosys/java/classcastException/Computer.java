@@ -8,7 +8,7 @@ public class Computer extends ObjectClass {
 	}
 	
 	public void company(){
-		
+		System.out.println("I am a computer");
 	}
 	
 	/**

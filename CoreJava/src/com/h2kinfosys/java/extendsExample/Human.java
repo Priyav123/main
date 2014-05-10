@@ -35,8 +35,34 @@ public class Human {
 		this.country = country;
 	}
 	
-	public static void main(String[] args) {
-		Human h = new Human("Jayram", 6 , "USA");
-		System.out.println(" "+ h.name);
+	public void printHumanDetails(){
+		System.out.println("name = "+ name +" Country = "+country+"Height ="+height);
+	}
+	
+	/*@Override
+	public boolean equals(Object paramObject) {
+		Human humanObject = (Human) paramObject;
+		if (this.country == humanObject.country
+				&& this.height == humanObject.height
+				&& this.name == humanObject.name) {
+			return true;
+		}else 
+			return false;
+		return this.country == humanObject.country
+				&& this.height == humanObject.height
+				&& this.name == humanObject.name;
+	}*/
+
+	public boolean equals(Object object) {
+		Human humanObject = (Human) object;
+		/*if (this.country == humanObject.country
+				&& this.height == humanObject.height
+				&& this.name == humanObject.name) {
+			return true;
+		}else 
+			return false;*/
+		return this.country == humanObject.country
+				&& this.height == humanObject.height
+				&& this.name == humanObject.name;
 	}
 }
