@@ -12,6 +12,11 @@ public class UDExceptionTwo {
 		}
 		
 		
-		udee.doCalculation(1, 3);
+		try {
+			udee.doCalculation(1, 3);
+		} catch (MyOwnException e) {
+			// TODO Auto-generated catch block
+			e.printStackTrace();
+		}
 	}
 }
