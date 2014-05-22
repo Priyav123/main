@@ -1,0 +1,10 @@
+[2014-05-21 20:55:57,351] DEBUG - main - LoggerExample main - Hello Logger
+[2014-05-21 20:57:43,883] DEBUG - main - LoggerExample main - Hello Logger
+[2014-05-21 20:57:43,884] DEBUG - main - LoggerExample main - Hello Logger Again
+[2014-05-21 21:00:09,980] DEBUG - main - LoggerExample main - Hello Logger
+[2014-05-21 21:00:09,982] DEBUG - main - LoggerExample main - Hello Logger Again
+[2014-05-21 21:00:09,982] INFO  - main - LoggerExample main - This is just for information
+[2014-05-21 21:00:45,925] INFO  - main - LoggerExample main - This is just for information
+[2014-05-21 21:01:13,484] DEBUG - main - LoggerExample main - Hello Logger
+[2014-05-21 21:01:13,485] DEBUG - main - LoggerExample main - Hello Logger Again
+[2014-05-21 21:01:13,485] INFO  - main - LoggerExample main - This is just for information
