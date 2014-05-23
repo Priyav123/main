@@ -28,30 +28,25 @@ public class JDBCProgram {
 	 * MAIN METHOD
 	 */
 	public static void main(String ...arg) throws Exception {
-		//		new JDBCProgram().selectQuery(100);
-		//		new JDBCProgram().preparedStatement(100,"Steven");
-		//		new JDBCProgram().createTable();
-		//		new JDBCProgram().createProcedureShowEmployees();
-				new JDBCProgram().callProcedure();
-		//		new JDBCProgram().insertRowInDBAndRollBack(28, "28");
-		//		new JDBCProgram().savePoint();
-		//		new JDBCProgram().addBatch();
+//				new JDBCProgram().selectQuery(200);
+//				new JDBCProgram().preparedStatement(100,"Steven");
+//				new JDBCProgram().createTable();
+//				new JDBCProgram().createProcedureShowEmployees();
+//				new JDBCProgram().callProcedure();
+//				new JDBCProgram().insertRowInDBAndRollBack(27, "Twenty 7");
+//				new JDBCProgram().savePoint();
+//				new JDBCProgram().addBatch();
 	}
 
 	static {
 		if(log.isDebugEnabled())
 			log.debug("Loading Driver....");
-
-		if(log.isInfoEnabled())
-			log.info("Loading Driver....");
-
 		try{
 			Class.forName(driver);//Loading a driver... Step 1
-
 			//			Driver myDriver = new oracle.jdbc.driver.OracleDriver(); 	
 			//			DriverManager.registerDriver( myDriver );
 
-		}catch(Exception exp){
+		}catch(ClassNotFoundException exp){
 			exp.printStackTrace();
 			log.error("Issues in Class Not Found"+ exp.getMessage());
 		}
@@ -71,8 +66,8 @@ public class JDBCProgram {
 		try{
 			stmt = con.createStatement(); // Step 3
 			rs = stmt.executeQuery("select * from employees where employee_id = "+empid); // Step 4
-			while(rs.next()){
-				System.out.println(rs.getString(1) +" "+rs.getString("first_name") + " "+ rs.getString("last_name"));
+			while(rs.next()) {
+				System.out.println(rs.getString("EMAIL")+" "+rs.getString("EMPLOYEE_ID") +" "+rs.getString("first_name") + " "+ rs.getString("last_name"));
 			}
 
 		}catch(SQLException exp){
@@ -108,18 +103,18 @@ public class JDBCProgram {
 			con.setAutoCommit(false); 
 			Statement stmt = con.createStatement();  
 
-			String SQL = "INSERT INTO MYEXCEL " + "VALUES (107, 'Rita')";
+			String SQL = "INSERT INTO H2KTable " + "VALUES (107, 'Rita')";
 			stmt.addBatch(SQL);
 
-			String SQL2 = "INSERT INTO MYEXCEL " + "VALUES (105, 'Rita')";
+			String SQL2 = "INSERT INTO H2KTable " + "VALUES (105, 'Rita')";
 			stmt.addBatch(SQL2);
 
-			String SQL3 = "update myexcel set name ='RAJA' where id = 107";
+			String SQL3 = "update H2KTable set name ='RAJA' where id = 102";
 			stmt.addBatch(SQL3);
 
 			int[] intArray = stmt.executeBatch();
 			log.info(intArray.length);
-
+			con.commit();
 		}catch(SQLException se){
 			try{
 				log.error("rolling back...");
@@ -144,13 +139,13 @@ public class JDBCProgram {
 			Statement stmt = con.createStatement(); //set a Savepoint 
 
 			savepoint1 = con.setSavepoint("Savepoint1"); 
-			String SQL = "INSERT INTO MYEXCEL VALUES (106, 'Rita6')";
+			String SQL = "INSERT INTO H2KTable VALUES (102, 'Rita2')";
 
 
 			stmt.executeUpdate(SQL); //Submit a malformed SQL statement that breaks String SQL = "INSERTED IN Employees " + "VALUES (107, 22, 'Sita', 'Tez')"; stmt.executeUpdate(SQL); // If there is no error, commit the changes. conn.commit();
 
 			savepoint2 = con.setSavepoint("Savepoint2"); 
-			String SQL2 = "INSERT INTO MYEXCEL " + "VALUES (107, 'Rita7')";
+			String SQL2 = "INSERT INTO H2KTable " + "VALUES (103, 'Rita3')";
 
 			stmt.executeUpdate(SQL2);
 
@@ -159,7 +154,7 @@ public class JDBCProgram {
 			try{
 				log.error("rolling back...");
 				con.rollback(savepoint2); 
-
+//				con.rollback(); 
 			}catch(Exception exp){
 				exp.printStackTrace();
 			}
@@ -167,13 +162,12 @@ public class JDBCProgram {
 			closeConnections(rs,stmt,con);
 		}
 	}
-
-
+	
 	public void insertRowInDBAndRollBack(int id , String name){
 		try{
 			con.setAutoCommit(false);
 
-			pstmt = con.prepareStatement("insert into MYEXCEL values(?,?)");
+			pstmt = con.prepareStatement("insert into H2KTable values(?,?)");
 
 			pstmt.setInt(1, id);
 			pstmt.setString(2, name);
@@ -182,7 +176,8 @@ public class JDBCProgram {
 			//			pstmt.setString(2, name+"1");
 
 			int intValue = pstmt.executeUpdate();
-
+			System.out.println("JDBCProgram.insertRowInDBAndRollBack()" + intValue);
+			
 			log.info("Return value from insert "+ intValue);
 			int i = 4/0;
 
@@ -221,7 +216,7 @@ public class JDBCProgram {
 	public void createTable() {
 		try{
 			stmt = con.createStatement();
-			boolean isExecuted = stmt.execute("create table MYEXCEL(id number(4) , name varchar2(20))");
+			boolean isExecuted = stmt.execute("create table H2KTable(id number(4) , name varchar2(20))");
 			System.out.println("Table got created..."+ isExecuted);
 		}catch(SQLException exp){
 			exp.printStackTrace();
@@ -252,7 +247,7 @@ public class JDBCProgram {
 		try{
 			cs = con.prepareCall("{call SHOW_EMPLOYEES(?,?)}");
 
-			cs.setInt(1, 100);
+			cs.setInt(1, 200);
 			cs.registerOutParameter(2, Types.VARCHAR);
 
 			cs.executeQuery();
