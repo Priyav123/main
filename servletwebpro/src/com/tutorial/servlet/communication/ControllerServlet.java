@@ -1,4 +1,4 @@
-package com.h2kinfosys.tutorial.servlet.communication;
+package com.tutorial.servlet.communication;
 
 import java.io.IOException;
 

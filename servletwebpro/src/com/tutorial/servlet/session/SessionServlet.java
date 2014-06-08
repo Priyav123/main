@@ -1,4 +1,4 @@
-package com.h2kinfosys.tutorial.servlet.session;
+package com.tutorial.servlet.session;
 
 import java.io.IOException;
 import java.io.PrintWriter;

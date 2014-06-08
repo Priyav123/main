@@ -1,4 +1,4 @@
-package com.h2kinfosys.tutorial.servlet.mvc;
+package com.tutorial.servlet.mvc;
 
 
 import java.io.IOException;
@@ -24,14 +24,14 @@ import org.apache.log4j.Logger;
 /**
  * Servlet implementation class HelloWorld
  */
-@WebServlet(name="NotProperUserView" ,description = "My Hello World", urlPatterns = { "/NotProperView" })
-public class NotProperUserView extends HttpServlet {
-	private static Logger log = Logger.getLogger(NotProperUserView.class);
+@WebServlet(name="DBController" ,description = "My Hello World", urlPatterns = { "/MessageView" })
+public class MessageView extends HttpServlet {
+	private static Logger log = Logger.getLogger(DBController.class);
 	private static final long serialVersionUID = 1L;
 	String message = "";
 
-	public NotProperUserView() {
-		message = "U are not a proper user...";
+	public MessageView() {
+		message = "Hello Excel World Again";
 	}
 	
 	@Override
@@ -43,15 +43,14 @@ public class NotProperUserView extends HttpServlet {
 	 */
 	protected void doGet(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
 		response.setContentType("text/html");
+//		HttpSession session = request.getSession();
 
 		String fname = request.getParameter("fname");
 		String lname = request.getParameter("lname");
 		
-		System.out.println("MessageView.doGet()" + fname + " "+ lname);	
 		PrintWriter out = response.getWriter();
 		
-		out.println("<h1>" + message + "</h1>");
-		out.println("<h1>" + fname + " "+ lname+ "</h1>");
+		out.println("<h1>" + fname + " "+ lname+ " Sucessfully saved in DB</h1>");
 	}
 
 	

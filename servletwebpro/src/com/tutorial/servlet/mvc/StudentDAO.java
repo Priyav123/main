@@ -1,4 +1,4 @@
-package com.h2kinfosys.tutorial.servlet.mvc;
+package com.tutorial.servlet.mvc;
 
 import java.sql.CallableStatement;
 import java.sql.Connection;
@@ -30,7 +30,7 @@ public class StudentDAO {
 	
 	private Connection getConnection(){
 		try{
-			con = DriverManager.getConnection(connectionURL,"hr","hr");
+			con = DriverManager.getConnection(connectionURL,"HR","HR");
 		}catch(Exception exp){
 			exp.printStackTrace();
 		}
@@ -57,7 +57,9 @@ public class StudentDAO {
 		}catch(Exception exp){
 			exp.printStackTrace();
 			try{
-				con.rollback();
+				if(con != null){
+					con.rollback();	
+				}
 			}catch(Exception exp1){
 				throw exp1;
 			}

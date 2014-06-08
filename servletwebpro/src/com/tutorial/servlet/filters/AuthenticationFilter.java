@@ -1,4 +1,4 @@
-package com.h2kinfosys.tutorial.servlet.filters;
+package com.tutorial.servlet.filters;
 
 import java.io.IOException;
 import java.util.Date;
@@ -11,6 +11,8 @@ import javax.servlet.ServletRequest;
 import javax.servlet.ServletResponse;
 import javax.servlet.annotation.WebFilter;
 import javax.servlet.annotation.WebInitParam;
+import javax.servlet.http.HttpServletRequest;
+import javax.servlet.http.HttpServletResponse;
 
 import org.apache.log4j.Logger;
 
@@ -42,10 +44,25 @@ public class AuthenticationFilter implements Filter {
 	 */
 	public void doFilter(ServletRequest request, ServletResponse response, FilterChain chain) throws IOException, ServletException {
 		String ipAddress = request.getRemoteAddr();
-		log.info("IP "+ ipAddress + ", Time "
-                + new Date().toString());
-				
-		chain.doFilter(request, response);
+		
+		log.info("IP "+ ipAddress + ", Time " + new Date().toString());
+		HttpServletRequest req = (HttpServletRequest) request;
+		HttpServletResponse res = (HttpServletResponse) response;
+		String uri = req.getRequestURI();
+		log.info("URI Name ="+ uri);
+		String firstName = req.getParameter("fname");
+		
+		if(firstName!= null && firstName.equals("danger")){
+			res.sendRedirect("danger.html");
+		}else {
+			chain.doFilter(request, response);
+		}
+		/*if(!(uri.endsWith("html") || uri.endsWith("LoginServlet"))){
+			res.sendRedirect("login.html");
+		}else{
+			chain.doFilter(request, response);
+		}*/
+//		chain.doFilter(request, response);
 	}
 
 	/**

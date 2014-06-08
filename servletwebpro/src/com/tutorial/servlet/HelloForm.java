@@ -1,4 +1,4 @@
-package com.h2kinfosys.tutorial.servlet;
+package com.tutorial.servlet;
 
 import java.io.IOException;
 import java.io.PrintWriter;
@@ -30,8 +30,17 @@ public class HelloForm extends HttpServlet {
 	 * @see HttpServlet#service(HttpServletRequest request, HttpServletResponse response)
 	 */
 	protected void doGet(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
-	      response.setContentType("text/html");
-
+	     response.setContentType("text/html");
+//		response.setContentType("text/plain");
+		//response.setContentType("applications/xml");
+		/**
+		 * Check the content Types in the below URL
+		 * http://www.freeformatter.com/mime-types-list.html
+		 */
+//		response.setContentType("application/msword");
+	     int age = Integer.parseInt(request.getParameter("age"));
+	     int idealHeight = 200/age;
+	     
 	      PrintWriter out = response.getWriter();
 		  String title = "Using GET Method to Read Form Data";
 	      String docType =
@@ -48,6 +57,7 @@ public class HelloForm extends HttpServlet {
 	                "  <li><b>Last Name</b>: "
 	                + request.getParameter("last_name") + "\n" +
 	                "</ul>\n" +
+	                "Your Height should be "+ idealHeight+
 	                "</body></html>");
 	}
 	@Override
