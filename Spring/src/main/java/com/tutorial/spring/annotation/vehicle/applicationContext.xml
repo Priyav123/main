@@ -1,7 +1,9 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
 <beans xmlns="http://www.springframework.org/schema/beans"
-        xmlns:aop="http://www.springframework.org/schema/aop" xmlns:context="http://www.springframework.org/schema/context"
-        xmlns:jee="http://www.springframework.org/schema/jee" xmlns:tx="http://www.springframework.org/schema/tx"
+        xmlns:aop="http://www.springframework.org/schema/aop" 
+        xmlns:context="http://www.springframework.org/schema/context"
+        xmlns:jee="http://www.springframework.org/schema/jee" 
+        xmlns:tx="http://www.springframework.org/schema/tx"
         xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
         xsi:schemaLocation="http://www.springframework.org/schema/aop
                             http://www.springframework.org/schema/aop/spring-aop-3.2.xsd
@@ -17,22 +19,15 @@
 	<!-- If Using context:component-scan then we need the @Component for each class and @Autowired annotation for the setter
 	methods -->
 	<context:component-scan base-package="com.tutorial.spring.annotation.vehicle"/>
-	
-	<!-- <context:annotation-config/> -->
-	 
-	<!--bean id="car" class="com.tutorial.spring.annotation.vehicle.fourwheel.Car"/>
-	<bean id="bike" class="com.tutorial.spring.annotation.vehicle.twowheel.Bike"/>
 
- 	<bean id="vehicle" class="com.tutorial.spring.annotation.vehicle.Vehicle"/>
-  -->
-  
   <!--  
   	Once u define <context:annotation-config/> and @Autowired Annotation in ur setter methods ,
-  	then u have to have a bean of tthat type in ur config xml eg : <bean id="car" 
-  -->
-   <!-- <bean id="car" class="com.tutorial.spring.annotation.vehicle.fourwheel.Car"/>
-   <bean id="bike" class="com.tutorial.spring.annotation.vehicle.twowheel.Bike"/> -->
-    
- 	<!-- <bean id="vehicle" class="com.tutorial.spring.annotation.vehicle.Vehicle">
-	</bean> -->
+  	then u have to have a bean of tthat type in ur config xml eg : <bean id="car "
+  	If using annotation config then no need to add @Component Annoation at each Class.
+  	 
+	 <context:annotation-config/>
+	<bean id="car" class="com.tutorial.spring.annotation.vehicle.fourwheel.Car"/>
+	<bean id="bike" class="com.tutorial.spring.annotation.vehicle.twowheel.Bike"/>
+ 	<bean id="vehicle" class="com.tutorial.spring.annotation.vehicle.Vehicle"/>
+  --> 
  </beans>
