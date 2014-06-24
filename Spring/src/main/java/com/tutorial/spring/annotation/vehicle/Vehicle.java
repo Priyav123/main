@@ -14,7 +14,7 @@ public class Vehicle {
 	private Car car;
 	private Bike bike;
 	public Vehicle() {
-		System.out.println("Vehile.enclosing_method() "+ this);
+		//System.out.println("Vehile.enclosing_method() "+ this);
 	}
 	public Car getCar() {
 		return car;

@@ -1,12 +1,11 @@
 package com.tutorial.spring.core_01.iocContainer._12InstanceFactory;
 
+public class DemoBean implements DemoInter {
 
-
-public class DemoBean implements DemoInter{
-
+	
 	
 	private TestBean tb = null;
-	
+
 	public DemoBean() {
 		System.out.println("zero parametrized constructor of DemoBean class");
 	}
@@ -16,15 +15,13 @@ public class DemoBean implements DemoInter{
 	}
 
 	public String sayHello() {
-		
-		return "tb = "+tb.toString();
+
+		return "tb = " + tb.toString();
 	}
-	
-	//instance factory method
-	public TestBean getTestBean(String msg)
-	{
+
+	// instance factory method
+	public TestBean getTestBean(String msg) {
 		System.out.println("instance factory method of DemoBean class");
 		return new TestBean(msg);
 	}
-
 }

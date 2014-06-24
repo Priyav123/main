@@ -13,7 +13,7 @@ public class Init implements InitializingBean{
 	}
 
 	public void setP1(int p1) {
-		System.out.println("In setter method");
+		System.out.println("In setter method of INIT.java");
 		this.p1 = p1;
 	}
 

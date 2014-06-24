@@ -12,7 +12,7 @@ public class AopTestClient {
 
 		Adder adder = (Adder)ctx.getBean("proxy");
 		int result = adder.add(0, 0);
-		//int result = adder.add(10, 20);
+//		int result = adder.add(10, 20);
 		System.out.println("Result = " + result);      
 	}
 }

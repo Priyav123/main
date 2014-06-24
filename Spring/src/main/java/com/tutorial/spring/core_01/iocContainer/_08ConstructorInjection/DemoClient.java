@@ -16,6 +16,5 @@ public class   DemoClient
 		BeanFactory  factory=new XmlBeanFactory(res);
 		Demo d1=(Demo)factory.getBean("demo");
 		System.out.print(d1);
-
 	}
 }

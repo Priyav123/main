@@ -12,7 +12,7 @@ public class I18nApp {
 	public static void main(String args[]) {
 
 		// ResourceBundle r =
-		// ResourceBundle.getBundle("com/excel/core_01/applicationContextContainer/_07I18n/app");
+		// ResourceBundle.getBundle("com/tutorial/core_01/applicationContextContainer/_07I18n/app");
 
 		Locale locale = new Locale("en");
 //		 Locale locale = new Locale("fr","be");

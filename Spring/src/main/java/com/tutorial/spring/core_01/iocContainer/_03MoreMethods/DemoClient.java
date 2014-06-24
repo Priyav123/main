@@ -14,6 +14,5 @@ public class DemoClient
 		//DemoInterImpl d1=(DemoInterImpl)factory.getBean("demo");
 		System.out.println(d1.wish("friends"));
 		System.out.println("Short format Date is: "+new java.util.Date());
-		System.out.println("Full formt date is: "+d1.getDateTime());
 	}
 }

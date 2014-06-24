@@ -18,10 +18,10 @@ public class   DemoClient {
 //		d12.setDt(new Date());
 //	
 		d1.show();
-		Thread.sleep(1000);
+		/*Thread.sleep(1000);
 		
 		Date d = (Date)factory.getBean("datte");
 		Thread.sleep(1000);
-		System.out.println(d);
+		System.out.println(d);*/
 	}
 }

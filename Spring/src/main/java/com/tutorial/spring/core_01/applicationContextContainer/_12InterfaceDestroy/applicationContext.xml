@@ -5,7 +5,7 @@
 
 	<bean id="de"
 		class="com.tutorial.spring.core_01.applicationContextContainer._12InterfaceDestroy.Destroy"
-		scope="singleton">
+		scope="singleton" destroy-method="destroy">
 		<property name="p1" value="20" />
 	</bean>
 

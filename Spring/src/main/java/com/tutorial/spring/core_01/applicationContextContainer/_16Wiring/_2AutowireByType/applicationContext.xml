@@ -12,7 +12,8 @@
 	
 	<!-- <bean id = "t2" class = "com.tutorial.spring.core_01.applicationContextContainer._16Wiring._2AutowireByType.TestBean"> 
 		<property name="msg"> <value>Gmg.... friends Njoy this Beautiful life :)</value> 
-		</property> </bean> -->
+		</property> 
+	</bean> -->
 	 
 	<bean id="db"
 		class="com.tutorial.spring.core_01.applicationContextContainer._16Wiring._2AutowireByType.DemoBean"

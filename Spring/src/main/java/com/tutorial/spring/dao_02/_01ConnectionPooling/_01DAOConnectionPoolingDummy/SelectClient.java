@@ -7,7 +7,7 @@ import org.springframework.beans.factory.xml.XmlBeanFactory;
 
 public class   SelectClient {
         public static void main(String args[]) {
-//			FileSystemResource  res =new FileSystemResource("com/excel/dao_02/_01ConnectionPooling/_01DAOConnectionPoolingDummy/spring.cfg.xml");
+//			FileSystemResource  res =new FileSystemResource("com/tutorial/dao_02/_01ConnectionPooling/_01DAOConnectionPoolingDummy/spring.cfg.xml");
 //			XmlBeanFactory  factory=new XmlBeanFactory(res);
 //			
 			ClassPathXmlApplicationContext ctx = new ClassPathXmlApplicationContext("com/tutorial/spring/dao_02/_01ConnectionPooling/_01DAOConnectionPoolingDummy/spring.cfg.xml");

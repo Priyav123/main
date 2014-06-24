@@ -9,8 +9,10 @@ public class DemoInterImpl implements DemoInter {
 	public DemoInterImpl() {
 		System.out.println("DemoInterImpl zero argument constructor");
 	}
-
-	public void setNessage(String s) {
+	public void setName(String name){
+		this.name = name;
+	}
+	public void setMessage(String s) {
 		System.out.println("setMessage() of DemoInterImpl class");
 		name = s;
 	}

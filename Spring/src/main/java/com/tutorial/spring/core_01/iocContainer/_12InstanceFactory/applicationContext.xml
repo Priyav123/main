@@ -16,8 +16,18 @@
 			<value>Gmg. my dear friends... :)</value>
 		</constructor-arg>
 	</bean> -->
+	<!-- 	
+	<bean id = "t1" class = "com.tutorial.spring.core_01.iocContainer._12InstanceFactory.TestBean">
+		<constructor-arg>Jayram</constructor-arg>
+	</bean> -->
 
 	<bean id = "db" class = "com.tutorial.spring.core_01.iocContainer._12InstanceFactory.DemoBean">			
+		<property name = "tb">
+			<ref bean = "t1"/>
+		</property>
+	</bean>
+	
+	<bean id = "db2" class = "test.Testing">			
 		<property name = "tb">
 			<ref bean = "t1"/>
 		</property>

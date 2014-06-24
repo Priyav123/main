@@ -28,7 +28,7 @@
 		
 		<property name="mappingResources">
 			<list>
-				<value>com/excel/orm_03/_02SpringHibernateApproach1/User.hbm.xml</value>
+				<value>com/tutorial/orm_03/_02SpringHibernateApproach1/User.hbm.xml</value>
 			</list>
 		</property>
 	

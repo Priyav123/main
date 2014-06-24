@@ -20,7 +20,7 @@ public class DemoBean implements DemoInter {
 	}
 
 	public String sayHello() {
-//		Calendar cal = Calendar.getInstance();
+		Calendar cal = Calendar.getInstance();
 		return "   cl = " + cal.toString();
 	}
 

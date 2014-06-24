@@ -9,6 +9,6 @@
 
 	 <bean id="cal" class="org.springframework.beans.factory.config.MethodInvokingFactoryBean">
       <property name="staticMethod"><value>java.util.Calendar.getInstance</value></property>
-   </bean>
+   	</bean>
     
 </beans>

@@ -11,7 +11,7 @@ import org.springframework.core.io.ClassPathResource;
 public class DemoClient {
 
 	public static void main(String[] args) {
-		ClassPathXmlApplicationContext  ctx = new ClassPathXmlApplicationContext("com/excel/core_01/applicationContextContainer/_13XmlDestroy/applicationContext.xml");
+		ClassPathXmlApplicationContext  ctx = new ClassPathXmlApplicationContext("com/tutorial/core_01/applicationContextContainer/_13XmlDestroy/applicationContext.xml");
 				
 		Destroy d = (Destroy) ctx.getBean("de");			
 		

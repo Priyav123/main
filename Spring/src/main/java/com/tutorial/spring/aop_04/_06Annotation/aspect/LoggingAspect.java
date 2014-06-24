@@ -11,25 +11,25 @@ import org.aspectj.lang.annotation.Around;
 import org.aspectj.lang.annotation.Aspect;
 import org.aspectj.lang.annotation.Before;
 
-@Aspect
+//@Aspect
 public class LoggingAspect {
 
-	@Before("execution(* com.tutorial.spring.aop_04._06Annotation.customer.Customer.addCustomer(..))")
+	//@Before("execution(* com.tutorial.spring.aop_04._06Annotation.customer.Customer.addCustomer(..))")
 	public void logBefore(JoinPoint joinPoint) {
 		System.out.println("logBefore() is running!");
 		System.out.println("hijacked : " + joinPoint.getSignature().getName());
 		System.out.println("****** ");
 	}
 
-	@After("execution(* com.tutorial.spring.aop_04._06Annotation.customer.Customer.addCustomer(..))")
+	//@After("execution(* com.tutorial.spring.aop_04._06Annotation.customer.Customer.addCustomer(..))")
 	public void logAfter(JoinPoint joinPoint) {
 		System.out.println("logAfter() is running!");
 		System.out.println("hijacked : " + joinPoint.getSignature().getName());
 		System.out.println("******");
 	}
 
-	@AfterReturning( pointcut = "execution(* com.tutorial.spring.aop_04._06Annotation.customer.Customer.addCustomerReturnValue(..))",
-			returning= "result")
+	//@AfterReturning( pointcut = "execution(* com.tutorial.spring.aop_04._06Annotation.customer.Customer.addCustomerReturnValue(..))",
+	//		returning= "result")
 	public void logAfterReturning(JoinPoint joinPoint, Object result) {
 		System.out.println("logAfterReturning() is running!");
 		System.out.println("hijacked : " + joinPoint.getSignature().getName());
@@ -37,9 +37,9 @@ public class LoggingAspect {
 		System.out.println("******");
 	}
 	
-	@AfterThrowing(
-			pointcut = "execution(* com.tutorial.spring.aop_04._06Annotation.customer.Customer.addCustomerThrowException(..))",
-			throwing= "error")
+	//@AfterThrowing(
+	//		pointcut = "execution(* com.tutorial.spring.aop_04._06Annotation.customer.Customer.addCustomerThrowException(..))",
+	//		throwing= "error")
 	public void logAfterThrowing(JoinPoint joinPoint, Throwable error) {
 		System.out.println("logAfterThrowing() is running!");
 		System.out.println("hijacked : " + joinPoint.getSignature().getName());
@@ -47,7 +47,7 @@ public class LoggingAspect {
 		System.out.println("******");
 	}
 	
-	@Around("execution(* com.tutorial.spring.aop_04._06Annotation.customer.Customer.addCustomerAround(..))")
+	//@Around("execution(* com.tutorial.spring.aop_04._06Annotation.customer.Customer.addCustomerAround(..))")
 	public void logAround(ProceedingJoinPoint joinPoint) throws Throwable {
 		System.out.println("logAround() is running!");
 		System.out.println("hijacked method : " + joinPoint.getSignature().getName());

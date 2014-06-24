@@ -9,8 +9,8 @@ import com.GetPackageInfo;
 public class I18nApp {
 	public static void main(String args[]) throws Exception {
 		System.out.println(GetPackageInfo.getInfo(I18nApp.class));
-		Locale locale = new Locale("fr","be");
-//		Locale locale = new Locale("en","uk");
+//		Locale locale = new Locale("fr","be");
+		Locale locale = new Locale("en","uk");
 //		Locale locale = new Locale("en","ca");
 //		Locale locale = new Locale("en");
 		

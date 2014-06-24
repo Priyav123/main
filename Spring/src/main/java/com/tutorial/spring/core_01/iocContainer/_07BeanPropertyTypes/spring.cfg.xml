@@ -19,9 +19,7 @@
 		class="com.tutorial.spring.core_01.iocContainer._07BeanPropertyTypes.DemoImple">
 		<property name="salary" value="5000"/>
 
-		<property name="tb">
-			<ref bean="tbean" />
-		</property>
+		<property name="tb" ref="tbean" />
 
 		<property name="dt">
 			<ref bean="dat" />
@@ -56,17 +54,17 @@
 
 		<property name="emails">
 			<set>
-				<value>jayram.excel@gmail.com</value>
-				<value>jayram.rout@yahoo.com</value>
+				<value>jayram@gmail.com</value>
+				<value>jayram@yahoo.com</value>
 			</set>
 		</property>
-
+		
 		<property name="perDetails">
 			<map>
 				<entry key="Sai" value="Universal King" />
 				<entry>
 					<key>
-						<value>Kanakadhar</value>
+						<value>Jayram</value>
 					</key>
 					<value>Service Provider</value>
 				</entry>

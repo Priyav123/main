@@ -12,7 +12,7 @@ public class DemoClient {
 	public static void main(String args[]) {
 
 		Resource res = new ClassPathResource(
-				"com/excel/core_01/iocContainer/_02SingletonDemo/Demo.xml");
+				"com/tutorial/core_01/iocContainer/_02SingletonDemo/Demo.xml");
 		BeanFactory factory = new XmlBeanFactory(res);
 
 		DemoInterImpl d1 = (DemoInterImpl) factory.getBean("demo");

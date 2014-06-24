@@ -10,7 +10,7 @@ public class   DemoClient
 		/*	Resource  res=new ClassPathResource("applicationContext.xml");
 		BeanFactory  factory=new XmlBeanFactory(res);*/
 
-		ClassPathXmlApplicationContext  ctx = new ClassPathXmlApplicationContext("com/excel/core_01/applicationContextContainer/_02Prototype/applicationContext.xml");
+		ClassPathXmlApplicationContext  ctx = new ClassPathXmlApplicationContext("com/tutorial/core_01/applicationContextContainer/_02Prototype/applicationContext.xml");
 
 		DemoInter d1=(DemoInter)ctx.getBean("demo");
 		DemoInterImpl d3=(DemoInterImpl)ctx.getBean("demo");

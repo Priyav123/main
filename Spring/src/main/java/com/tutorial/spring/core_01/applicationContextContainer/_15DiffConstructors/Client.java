@@ -14,7 +14,7 @@ public final class Client {
 	public static void main(String[] args) {
 		// TODO Auto-generated method stub
 		
-		ClassPathXmlApplicationContext  ctx = new ClassPathXmlApplicationContext("com/excel/core_01/applicationContextContainer/_15DiffConstructors/applicationContext.xml");
+		ClassPathXmlApplicationContext  ctx = new ClassPathXmlApplicationContext("com/tutorial/core_01/applicationContextContainer/_15DiffConstructors/applicationContext.xml");
 		Bean b1 = (Bean) ctx.getBean("one");
 		Bean b2 = (Bean) ctx.getBean("two");
 		System.out.println(b1);

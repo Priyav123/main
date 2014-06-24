@@ -60,7 +60,7 @@ public class SimpleJdbcCallTest {
 			this.setParameters(params);
 			compile();
 		}//constructor
-
+		
 		public Map myexecute(String name) {
 			HashMap map = new HashMap();
 			map.put("NAME",name);
