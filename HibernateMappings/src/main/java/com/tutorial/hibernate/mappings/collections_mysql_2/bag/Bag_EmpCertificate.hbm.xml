@@ -3,7 +3,12 @@
  "-//Hibernate/Hibernate Mapping DTD//EN"
  "http://www.hibernate.org/dtd/hibernate-mapping-3.0.dtd"> 
 
-<hibernate-mapping>
+
+<!-- 
+A bag is an unordered, unkeyed collection that can contain the same element multiple times. 
+A bag permits duplicates, so it has no primary key. The Java collections API, curiously, has no Bag
+-->
+ <hibernate-mapping>
    <class name="com.tutorial.hibernate.mappings.collections_mysql_2.bag.Employee" table="EMPLOYEE">
       <id name="id" type="int" column="id">
          <generator class="native"/>
