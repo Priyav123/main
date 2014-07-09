@@ -9,7 +9,7 @@ import javax.jws.WebService;
 @WebService(endpointInterface="com.tutorial.ws.helloworld.HelloWorld")
 public class HelloWorldImpl implements HelloWorld {
 @Override
-	public String getHelloWorld(String name) {
+	public String getHelloWorld(String name, String nametwo) {
 		return "Hello World Welcome " + name;
 	}
 }

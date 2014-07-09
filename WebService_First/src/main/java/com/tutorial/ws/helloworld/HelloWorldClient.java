@@ -20,7 +20,7 @@ public class HelloWorldClient {
 	        QName qname = new QName("http://helloworld.ws.tutorial.com/", "HelloWorldImplService");
 	        Service service = Service.create(url, qname);
 	        HelloWorld hello = service.getPort(HelloWorld.class);
-	        System.out.println(hello.getHelloWorld("Hello Guys !!!"));
+	        System.out.println(hello.getHelloWorld("Hello Guys !!!","Hi"));
 		}catch (Exception exp) {
 			exp.printStackTrace();
 		}

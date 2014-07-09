@@ -20,11 +20,13 @@ public class OrderProcessClient {
 	        QName qname = new QName("http://order.ws.tutorial.com/", "OrderProcessService");
 	        Service service = Service.create(url, qname);
 	        OrderProcess orderProcess = service.getPort(OrderProcess.class);
+	        
 	        Order order = new Order();
 	        order.setCustomerID("001");
 	        order.setItemID("Item01");
 	        order.setPrice(20);
 	        order.setQty(1);
+	        
 	        System.out.println(orderProcess.processOrder(order));
 		}catch (Exception exp) {
 			exp.printStackTrace();

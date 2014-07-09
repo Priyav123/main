@@ -12,7 +12,7 @@ import javax.jws.soap.SOAPBinding.Use;
 //The Service EndPoint Interface(SEI) directly corresponds to a wsdl:portType element
 
 @WebService
-@SOAPBinding(style = Style.DOCUMENT, parameterStyle = ParameterStyle.WRAPPED , use= Use.LITERAL)
+@SOAPBinding(style = Style.DOCUMENT, parameterStyle = ParameterStyle.BARE , use= Use.LITERAL)
 public interface OrderProcess {
 	/*
 	 * @WebMethod is an optional annotation is optional and is used for customizing the
