@@ -20,13 +20,9 @@ public class DemoImpl implements DemoInter{
 	}
 
 	public Iterator getData() throws Exception {
-		// TODO Auto-generated method stub
-		
 		System.out.println("In spring class getData()");
-		
 		Session  ses = factory.openSession();
-		
-		Query query = ses.createQuery("from User");
+		Query query = ses.createQuery("from DBUser");
 		Iterator i1 = query.iterate();
 		//ses.close();
 		return i1;
