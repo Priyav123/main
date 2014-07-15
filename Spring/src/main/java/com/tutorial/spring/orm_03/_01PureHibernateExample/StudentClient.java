@@ -11,7 +11,7 @@ class StudentClient {
 		Configuration cfg = new Configuration();
 		// read configuration file
 		cfg = cfg
-				.configure("com/tutorial/orm_03/_01PureHibernateExample/hibernate.cfg.xml"); // create
+				.configure("com/tutorial/spring/orm_03/_01PureHibernateExample/hibernate.cfg.xml"); // create
 																							// SessionFactory
 		SessionFactory factory = cfg.buildSessionFactory();
 		// getting session from session factory
