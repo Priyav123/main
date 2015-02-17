@@ -1,4 +1,2 @@
-April-2014-Batch
-================
-
+This Repository has code base starting from core java to advance java
 Java-J2EE Batch
